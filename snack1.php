@@ -5,6 +5,7 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     
  </head>
  <body>
      <!-- ## Snack 1
@@ -14,37 +15,45 @@
     <?php
         $matchs = [
             [
-                homeSquad => "Detroit Pistons",
-                pointHome => 100,
-                visitors => "Miami Heat",
-                pointVisitors => 90
+                'homeSquad' => "Detroit Pistons",
+                'pointHome' => 100,
+                'visitors' => "Miami Heat",
+                'pointVisitors' => 90
             ],
             [
-                homeSquad => "Memphis Grizzlies",
-                pointHome => 100,
-                visitors => "Portland Trail Blazers",
-                pointVisitors => 105
+                'homeSquad' => "Memphis Grizzlies",
+                'pointHome' => 100,
+                'visitors' => "Portland Trail Blazers",
+                'pointVisitors' => 105
             ],
             [
-                homeSquad => "Sacramento Kings",
-                pointHome => 121,
-                visitors => "San Antonio Spurs",
-                pointVisitors => 114
+                'homeSquad' => "Sacramento Kings",
+                'pointHome' => 121,
+                'visitors' => "San Antonio Spurs",
+                'pointVisitors' => 114
             ],
             [
-                homeSquad => "Chicago Bulls",
-                pointHome => 115,
-                visitors => "Los Angeles Lakers",
-                pointVisitors => 110
+                'homeSquad' => "Chicago Bulls",
+                'pointHome' => 115,
+                'visitors' => "Los Angeles Lakers",
+                'pointVisitors' => 110
             ],
             [
-                homeSquad => "Minnesota Timberwolves
-                ",
-                pointHome => 111,
-                visitors => "Dallas Mavericks",
-                pointVisitors => 105
+                'homeSquad' => "Minnesota Timberwolves",
+                'pointHome' => 111,
+                'visitors' => "Dallas Mavericks",
+                'pointVisitors' => 105
             ],
-        ]
+        ];
+        
     ?>
+
+    <div>
+        <?php
+            for ($i=0; $i < count($matchs); $i++) { 
+                echo $matchs[$i]['homeSquad'] . " - " . $matchs[$i]['visitors'] . " | " . $matchs[$i]['pointHome'] . " - " . $matchs[$i]['pointVisitors'] . "<br>";
+            }
+        ?>
+    </div>
  </body>
  </html>
