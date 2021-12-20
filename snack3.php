@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snack 3</title>
+    <style>
+        div {
+            margin : 10px;
+            border : solid 1px black
+        }
+    </style>
 </head>
 <body>
     <!-- ## Snack 3
@@ -53,8 +59,9 @@
         ],
     ];
     $arrayKeys = array_keys($posts);
+
     for ($i=0; $i < count($arrayKeys) ; $i++) { 
-        var_dump($posts[$arrayKeys[$i]]);
+        // var_dump($posts[$arrayKeys[$i]]);
         for ($x=0; $x < count($posts[$arrayKeys[$i]]); $x++) { 
             echo "<div>" . $arrayKeys[$i] . "<br>" . $posts[$arrayKeys[$i]][$x]['title'] . "<br>" . $posts[$arrayKeys[$i]][$x]['author'] . "<br>" . $posts[$arrayKeys[$i]][$x]['text'] ."</div>";
         }
