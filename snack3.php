@@ -61,16 +61,10 @@
     $arrayKeys = array_keys($posts);
 
     for ($i=0; $i < count($arrayKeys) ; $i++) { 
-        // var_dump($posts[$arrayKeys[$i]]);
         for ($x=0; $x < count($posts[$arrayKeys[$i]]); $x++) { 
             echo "<div>" . $arrayKeys[$i] . "<br>" . $posts[$arrayKeys[$i]][$x]['title'] . "<br>" . $posts[$arrayKeys[$i]][$x]['author'] . "<br>" . $posts[$arrayKeys[$i]][$x]['text'] ."</div>";
         }
     }
     ?>
-    <div>
-        <?php
-            
-        ?>
-    </div>
 </body>
 </html>
