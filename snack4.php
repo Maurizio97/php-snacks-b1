@@ -14,7 +14,10 @@
     <?php
         $arrNum = [];
         for ($i=0; count($arrNum) < 15 ; $i++) { 
-            $arrNum[] = rand(1, 100);
+             $randNum = rand(1, 100);
+            if (!in_array($randNum, $arrNum)){
+                $arrNum[] = $randNum;
+            }
         }
         var_dump($arrNum);
     ?>
