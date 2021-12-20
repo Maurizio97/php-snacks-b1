@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snack 7</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- ## Snack 7
@@ -33,10 +38,9 @@
             ],
         ];
 
-        foreach($student as $class){
-            var_dump($student);
+        foreach($class as $student){
             $sumVote = 0;
-            foreach ($vote as $student['votes']) {
+            foreach ($student['votes'] as $vote) {
                 $sumVote = $sumVote + $vote;
                 
             }
