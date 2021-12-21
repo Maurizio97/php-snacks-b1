@@ -45,13 +45,24 @@
         ];
         $rectangleGrey = [];
         $rectagleGreen = [];
-        $arrayKeys = array_keys($db);
-        for ($i=0; $i < count($arrayKeys); $i++) { 
-            for ($x=0; $x < count($db[$arrayKeys[$i]]) ; $x++) { 
-                if ($arrayKeys[$i] === 'teachers') {
-                    echo "<div id='grey'>". $db[$arrayKeys[$i]][$x]['name']. "<br>" . $db[$arrayKeys[$i]][$x]['lastname']. "<br>" . "</div>";
+        // $arrayKeys = array_keys($db);
+        // for ($i=0; $i < count($arrayKeys); $i++) { 
+        //     for ($x=0; $x < count($db[$arrayKeys[$i]]) ; $x++) { 
+        //         if ($arrayKeys[$i] === 'teachers') {
+        //             echo "<div id='grey'>". $db[$arrayKeys[$i]][$x]['name']. "<br>" . $db[$arrayKeys[$i]][$x]['lastname']. "<br>" . "</div>";
+        //         } else {
+        //             echo "<div id='green'>". $db[$arrayKeys[$i]][$x]['name']. "<br>" . $db[$arrayKeys[$i]][$x]['lastname']. "<br>" . "</div>";
+        //         }
+        //     }
+        // }
+
+        // es live
+        foreach ($db as $key => $category) {
+            foreach ($category as $person) {
+                if ($key === 'teachers') {
+                    echo "<div id='grey'>". $person['name']. "<br>" . $person['lastname']. "<br>" . "</div>";
                 } else {
-                    echo "<div id='green'>". $db[$arrayKeys[$i]][$x]['name']. "<br>" . $db[$arrayKeys[$i]][$x]['lastname']. "<br>" . "</div>";
+                    echo "<div id='green'>". $person['name']. "<br>" . $person['lastname']. "<br>" . "</div>";
                 }
             }
         }
